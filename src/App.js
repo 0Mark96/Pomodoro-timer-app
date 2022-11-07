@@ -47,7 +47,7 @@ function App() {
              }
            
           })
-      },100)// run each second
+      },1000)// run each second
     }
     
     return ()=> clearInterval(interval)

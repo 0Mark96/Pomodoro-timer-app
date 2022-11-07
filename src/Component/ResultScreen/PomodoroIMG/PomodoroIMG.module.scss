@@ -1,0 +1,76 @@
+.img_cont{
+    position: relative;
+    width: 190px;
+    height: 190px;
+    background-image: url('../../../assets/Img/pomodoro.svg');
+    background-position: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    .pomodoro_eye_left, .pomodoro_eye_right{
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        bottom: 40%;
+        background-color: white;
+        width: 26px;
+        height: 35px;
+        border-radius: 50%;
+        overflow: hidden;
+        transition: height .3s linear;
+        .pupils{
+            width: 15px;
+            height: 25px;
+            background-color: black;
+            border-radius: 50%;
+            
+        }
+    }
+    .pomodoro_eye_left{
+        left: 30%;
+    }
+    .pomodoro_eye_right{
+        right: 30%;
+    }
+
+    .pomodoro_mounth{
+        position: absolute;
+        top:67%;
+        width: 40%;
+        height: 25px;
+        // height: 2px; // sad
+        transform: translateX(75%);
+        background-color: black; 
+        border-bottom-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        overflow: hidden;
+        transition: height .3s linear;
+        .teeth{ // not when sad
+            width: 70%;
+            height: 7px;
+            margin: 0 auto;
+            background-color: rgb(233, 231, 231);
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px;
+        }
+    }
+}
+
+
+// During session
+
+.session_eye{
+    height: 9px !important;
+    transition: height .3s linear;
+}
+
+.session_mounth{
+    height: 2px !important;
+    transition: height .3s linear;
+    .teeth{
+        display: none;
+    }
+}
+
+

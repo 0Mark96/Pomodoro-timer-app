@@ -1,0 +1,28 @@
+@import './common/variable';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: $Green;
+    font-family: 'Stylish', sans-serif;
+    color: $DarkGreen;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+
+.app{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    border: 13px solid $Black;
+}
+
+button{
+    border: none;
+    background-color: transparent;
+}

@@ -1,0 +1,59 @@
+@import '../../common/variable';
+
+.open_btn_cont{
+  display: flex;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto;
+  .setting_img{
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.inner_menu_cont{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0px;
+    overflow: hidden;
+    background-color: $Black;
+    color: white;
+    transition: height .7s ease-in-out;
+    
+    display: flex;
+    flex-direction: column;
+
+    .btn_close{
+      margin: 0 auto;
+      margin-top: 80px;
+      width: 40px;
+      height: 40px;
+    }
+    .simple_setting{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 80px;
+      color: $Green
+    }
+    .info_advanced{
+      margin-top: 80px;
+      text-align: center;
+      color: white;
+    }
+    .advanced_setting{
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin-top: 50px;
+      color: $Green;
+    }
+}
+.active_menu{
+    height: 100vh;
+    overflow-y:auto;
+    transition: height .7s ease-in-out;
+}

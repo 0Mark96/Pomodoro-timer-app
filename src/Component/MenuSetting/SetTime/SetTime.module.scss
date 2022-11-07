@@ -1,0 +1,26 @@
+@import '../../../common/variable';
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .set_name{
+        margin-bottom: 25px;
+    }
+    .btn_wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        color: $Green;
+        .set_btn{
+            width: 18px;
+            height: 18px;
+            margin: 10px;
+            .setImg{
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+}

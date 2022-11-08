@@ -6,6 +6,7 @@ import circle from '../../assets/Img/circle.svg'
 
 const TimerControl = ({setTimerOn,timerOn,resetTime}) => {
   const {timer_control_cont,btn_control,img_control,reset} = style
+  
   return (
     <div className={timer_control_cont}>
       <button onClick={()=>{setTimerOn(!timerOn)}} className={btn_control}>

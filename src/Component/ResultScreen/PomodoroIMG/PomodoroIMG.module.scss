@@ -39,14 +39,13 @@
         top:67%;
         width: 40%;
         height: 25px;
-        // height: 2px; // sad
         transform: translateX(75%);
         background-color: black; 
         border-bottom-left-radius: 100px;
         border-bottom-right-radius: 100px;
         overflow: hidden;
         transition: height .3s linear;
-        .teeth{ // not when sad
+        .teeth{ 
             width: 70%;
             height: 7px;
             margin: 0 auto;

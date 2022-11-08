@@ -19,7 +19,10 @@ function App() {
   const [longerBreak,setLongerBreak] = useState(7 * 60)
   //state for animation
   const [onSession,setOnSession] = useState(false)
- 
+  // timer second
+  const [fastTimer, setFastTimer] = useState(false)
+
+
   // Run timer each second and if neither condition is true, subtract the time by -1
 
   useEffect(()=>{
@@ -47,12 +50,12 @@ function App() {
              }
            
           })
-      },1000)// run each second
+      },fastTimer ? 200 : 1000)// run each second
     }
     
     return ()=> clearInterval(interval)
 
-  },[timerOn,displayTime,breakTime,onBreak,sessionTime,NumOfSession,sessNumBeforeLongBreak,longerBreak])
+  },[timerOn,displayTime,breakTime,onBreak,sessionTime,NumOfSession,sessNumBeforeLongBreak,longerBreak,fastTimer])
   
   // Set desired time for session,break and longer break
 
@@ -81,13 +84,11 @@ function App() {
   }
 
   // Button reset
-
+  
   const resetTime = () => {
-    setDisplayTime(25 * 60)
-    setBreakTime(5 * 60)
-    setSessionTime(25 * 60)
-    setOnBreak(false)
     setTimerOn(false)
+    setDisplayTime(sessionTime)
+    setOnBreak(false)
   }
 
  // advanced setting (set Number of session before long break)
@@ -144,6 +145,8 @@ function App() {
       sessNumBeforeLongBreak={sessNumBeforeLongBreak} 
       longerBreak={longerBreak}
     />
+    {/* faster timer */}
+    <button onClick={()=>setFastTimer(!fastTimer)} style={{width:'50px', height:'50px', borderRadius:'50%', fontSize:'25px',backgroundColor: fastTimer ? 'red':'transparent',position:"fixed",bottom:0}}>x5</button>
 </div>
   )
 }

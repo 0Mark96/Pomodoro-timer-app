@@ -3,6 +3,7 @@ import PomodoroIMG from './PomodoroIMG/PomodoroIMG'
 
 const ResultScreen = ({onBreak,formatTime,displayTime,NumOfSession,timerOn}) => {
   const {result_screen_cont,type_of_timer,timer,session_numb} = style
+  
   return (
     <div className={result_screen_cont}>
       <PomodoroIMG onBreak={onBreak} timerOn={timerOn}/>
